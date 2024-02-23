@@ -1,6 +1,11 @@
-FROM python:3.8
-WORKDIR /aws-pipeline
-ADD . /aws-pipeline
-RUN pip install --no-cache-dir flask -r requirements.txt
-COPY landing_page.py ./
-CMD ["python", "landing_page.py"]
+FROM node:19.7.0-alpine
+ENV NODE_ENV=production
+RUN mkdir /labone
+RUN chown -R node:node /labone
+WORKDIR /labone
+USER node
+COPY --chown=node:node . .
+RUN npm install
+EXPOSE 3000
+CMD ["node", "src/index.js"]
+ 
