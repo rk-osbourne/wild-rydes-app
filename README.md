@@ -1,2 +1,2 @@
 # aws-pipeline
-Testing out a simple AWS pipeline to host a website on ECS
+Containerizing a simple python app to host a website on ECS using CI/CD pipeline
