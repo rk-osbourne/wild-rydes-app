@@ -1,11 +1,10 @@
-FROM node:19.7.0-alpine
-ENV NODE_ENV=production
-RUN mkdir /labone
-RUN chown -R node:node /labone
-WORKDIR /labone
-USER node
-COPY --chown=node:node . .
-RUN npm install
-EXPOSE 3000
-CMD ["node", "src/index.js"]
- 
+FROM python:3
+# Set application working directory
+WORKDIR /usr/src/app
+# Install requirements
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+# Install application
+COPY wild_rydes_app.py ./
+# Run application
+CMD wild_rydes_app.py
