@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Install application
 COPY wild_rydes_app.py ./
 # Run application
-CMD wild_rydes_app.py
+CMD ["python", "wild_rydes_app.py"]
