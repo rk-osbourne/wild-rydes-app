@@ -11,4 +11,4 @@ def home():
     return f"Company Name: {company_name}, Developer Name: {developer_name}, Company ID: {company_id}"
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8080)
+    app.run(debug=True, port=80)
