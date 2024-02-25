@@ -2,7 +2,15 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      python: 3.9
+      python: 3.11
   pre_build:
     commands:
       - pip install -r requirements.txt
+  build:
+    commands:
+      - echo "Starting build phase..."
+      - echo "Building Docker image..."
+      - docker build -t wildrydes-web .
+  post_build:
+    commands:
+      - echo "Starting post_build phase..."
