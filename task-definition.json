@@ -24,6 +24,7 @@
     "memory": "512",
     "cpu": "256",
     "executionRoleArn": "arn:aws:iam::801923166036:role/ecsTaskExecutionRole",
+    "family": "wild_rytes_td",
     "taskRoleArn": "arn:aws:iam::801923166036:role/ecsTaskExecutionRole",
     "placementConstraints": []
 }
