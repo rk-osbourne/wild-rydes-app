@@ -7,5 +7,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Install application
 COPY wild_rydes_app.py ./
 # Run application
-EXPOSE 8000
+EXPOSE 80
 CMD ["python", "wild_rydes_app.py"]
