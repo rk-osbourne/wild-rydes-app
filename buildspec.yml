@@ -10,7 +10,6 @@ phases:
     commands:
       - echo "Starting build phase..."
       - echo "Building Docker image..."
-      #- docker build -t wild_rydes_app.py .
   post_build:
     commands:
       - echo "Starting post_build phase..."
