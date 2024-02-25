@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY wild_rydes_app.py ./
 # Run application
 EXPOSE 8000
-CMD ["python", "wild_rydes_app.py" "--host=0.0.0.0"]
+CMD ["python", "wild_rydes_app.py"]
