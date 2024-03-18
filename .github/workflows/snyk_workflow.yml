@@ -22,7 +22,7 @@ jobs:
           node-version: '14'
         
       - name: Authenticate Snyk
-        run: npx snyk auth $SNYK_TOKEN
+        run: npx snyk auth ${{ secrets.SNYK_TOKEN }}
 
       - name: Install dependencies
         run: npm install
