@@ -1,0 +1,20 @@
+name: Snyk Vulnerability Scan
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  snyk_scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Snyk test
+        uses: snyk/actions/node@v3
+        with:
+          args: test
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
