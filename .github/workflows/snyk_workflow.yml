@@ -28,4 +28,4 @@ jobs:
         run: npx snyk auth ${{ secrets.SNYK_TOKEN }}
 
       - name: Run Snyk security check
-        run: npx snyk test task-definition.json wild_rydes_app.py requirements.txt
+        run: npx snyk test --file=task-definition.json --file=wild_rydes_app.py --file=requirements.txt
